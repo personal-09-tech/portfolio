@@ -1,0 +1,541 @@
+@charset "UTF-8";
+/* 共通のスタイル */
+span {
+  color: #c12a2a;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.main-section:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.profile-section,
+.mind-section,
+.vision-section {
+  margin-bottom: 80px;
+}
+
+.inner {
+  width: 1100px;
+  max-width: 100%;
+  margin: 100px auto;
+}
+
+.img {
+  width: 380px;
+  height: 340px;
+  object-fit: cover;
+  box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  font-size: 3vw;
+  margin-bottom: 60px;
+}
+
+/* フォントのスタイル */
+body {
+  font-family: Helvetica, "游ゴシック", "Yu Gothic", YuGothic, HiraKakuProN-W3,
+    "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+  text-align: left;
+}
+
+h1,
+.header li,
+.title,
+.shadow,
+.my-prof dt,
+.skill-ttl,
+.skill-section-ttl,
+.skill-ttl,
+.contact-ttl {
+  font-family: obvia, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mv-catch {
+  font-family: obvia, sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.mind-catch span {
+  font-family: vdl-gigag, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* ヘッダーのスタイル */
+.header {
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.header-ttl {
+  font-size: 25px;
+}
+
+.header-top {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.icon-area {
+  margin-left: auto;
+  padding-top: 10px;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+}
+
+.facebook-icon {
+  margin-right: 30px;
+}
+
+.header-nav {
+  margin-bottom: 20px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-list-item {
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+.nav-list-item:not(:last-child) {
+  margin-right: 45px;
+}
+
+.header-nav .nav-list .nav-list-item {
+  position: relative;
+  overflow: hidden;
+}
+.header-nav .nav-list .nav-list-item::before,
+.header-nav .nav-list .nav-list-item::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #c12a2a;
+  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.header-nav .nav-list .nav-list-item::before {
+  top: 0;
+  left: -100%;
+}
+.header-nav .nav-list .nav-list-item::after {
+  bottom: 0;
+  right: -100%;
+}
+.header-nav .nav-list .nav-list-item a::before,
+.header-nav .nav-list .nav-list-item a::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: #000000;
+  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.header-nav .nav-list .nav-list-item a::before {
+  top: 100%;
+  left: 0;
+}
+.header-nav .nav-list .nav-list-item a::after {
+  top: -100%;
+  right: 0;
+}
+.header-nav .nav-list .nav-list-item:hover::before {
+  left: 0;
+}
+.header-nav .nav-list .nav-list-item:hover::after {
+  right: 0;
+}
+.header-nav .nav-list .nav-list-item a:hover::before {
+  top: 0;
+}
+.header-nav .nav-list .nav-list-item a:hover::after {
+  top: 0;
+}
+
+/* メインビジュアルのデザイン */
+.mv-section {
+  background: url(../img/mv.jpg) center center no-repeat;
+  background-size: contain;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.mv-catch {
+  margin-left: 100px;
+  width: 35%;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 5vw;
+  line-height: 1.2;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.title-copy-top {
+  padding: 20px 0 0 30px;
+}
+
+.title-copy-bottom {
+  padding: 0 30px 20px 80px;
+}
+
+/* profileのデザイン */
+.profile-section {
+  margin-top: 120px;
+}
+
+.prof-img {
+  margin: 0 auto;
+}
+
+.shadow {
+  opacity: 0.2;
+  font-size: 4vw;
+}
+
+.profile-content {
+  position: relative;
+  width: 50%;
+}
+
+.profile-shadow {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+}
+
+.my-prof > div {
+  display: flex;
+}
+
+.my-prof dt {
+  width: 25%;
+}
+
+.my-prof dd {
+  padding-left: 5px;
+}
+
+.background-text {
+  font-size: 13px;
+  margin-left: 50px;
+}
+/* Mindのデザイン */
+.mind-section {
+  justify-content: flex-end;
+}
+
+.mind-content {
+  position: relative;
+}
+
+.mind-img {
+  margin: 0 auto;
+}
+
+.mind-shadow {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+}
+
+.mind-catch {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+/* Visionのデザイン */
+.vision-section {
+  position: relative;
+}
+
+.vision-shadow {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+}
+
+.vision-content {
+  width: 50%;
+}
+
+.vision-catch {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.vision-img {
+  margin: 0 auto;
+}
+
+/* Skillのデザイン */
+.skill-wrap {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 80px;
+}
+
+.skill {
+  width: 30%;
+}
+
+.skill-section-ttl {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.skill-section-ttl:before,
+.skill-section-ttl:after {
+  content: "";
+  flex-grow: 1;
+  height: 2px;
+  background: #c12a2a;
+  display: block;
+}
+
+.skill-section-ttl:before {
+  margin-right: 15px;
+}
+
+.skill-section-ttl:after {
+  margin-left: 15px;
+}
+
+.skill-ttl {
+  text-align: center;
+  font-size: 23px;
+}
+
+.skill-sub {
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 40px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.skill-icon {
+  display: block;
+  width: auto;
+  margin: auto;
+  margin-bottom: 30px;
+  object-fit: cover;
+}
+
+.skill-text {
+  width: 270px;
+  margin: 0 auto;
+  text-align: justify;
+}
+/* Contactのデザイン */
+.contact-ttl {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+}
+
+.contact-ttl:before,
+.contact-ttl:after {
+  content: "";
+  flex-grow: 1;
+  height: 2px;
+  background: #c12a2a;
+  display: block;
+}
+
+.contact-ttl:before {
+  margin-right: 15px;
+}
+
+.contact-ttl:after {
+  margin-left: 15px;
+}
+
+.contact-catch {
+  position: relative;
+  height: 100px;
+}
+
+.contact-text {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  /* text-align: center; */
+}
+
+.skill-text {
+  margin: 0 auto;
+}
+
+.contact-form {
+  width: 50%;
+  margin: 0 auto;
+}
+/* --------------コンタクトフォーム入力欄のデザイン */
+.question {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.question textarea {
+  margin-bottom: 30px;
+}
+
+.question:focus-within .labelName {
+  transform: translateY(0) scale(0.8);
+}
+
+.labelName {
+  display: block;
+  order: 1;
+  transition: transform 0.2s;
+  transform: translateY(2rem) scale(1);
+  transform-origin: 0 100%;
+}
+
+input,
+textarea {
+  order: 2;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  padding: 8px;
+  border-bottom: 1px solid #333333;
+}
+
+input:invalid,
+textarea:invalid {
+  box-shadow: none;
+}
+
+input:invalid ~ .errorMessage,
+textarea:invalid ~ .errorMessage {
+  display: block;
+}
+
+input:invalid ~ .OKMessage,
+textarea:invalid ~ .OKMessage {
+  display: none;
+}
+
+input:valid ~ .errorMessage,
+textarea:valid ~ .errorMessage {
+  display: none;
+}
+
+input:valid ~ .OKMessage,
+textarea:valid ~ .OKMessage {
+  display: block;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: transparent;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:placeholder-shown ~ .messageBox,
+textarea:placeholder-shown ~ .messageBox {
+  display: none;
+}
+
+input:not(:placeholder-shown) ~ .labelName,
+textarea:not(:placeholder-shown) ~ .labelName {
+  transform: translateY(0) scale(0.8);
+}
+
+textarea {
+  margin-top: 4px;
+  border: 1px solid #999;
+}
+
+textarea ~ .labelName {
+  padding-left: 8px;
+}
+
+.messageBox {
+  padding: 0 8px 8px 8px;
+  position: absolute;
+  bottom: -36px;
+  z-index: -1;
+  font-size: 0.9rem;
+}
+
+.messageBox.errorMessage {
+  color: red;
+}
+
+.messageBox.OKMessage {
+  color: green;
+}
+
+.button {
+  text-align: center;
+}
+
+.submitButton {
+  width: 40%;
+  height: 40px;
+  text-align: center;
+  border: none;
+  background-color: #c12a2a;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.submitButton:disabled {
+  background-color: #999;
+  color: #ddd;
+  cursor: not-allowed;
+}
+.submitButton:not(:disabled):hover {
+  opacity: 0.8;
+}
+
+/* フッターのデザイン */
+.footer {
+  display: flex;
+  margin: 0 auto 20px;
+}
+
+.footer-nav-list {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.copyright {
+  margin-left: auto;
+}
